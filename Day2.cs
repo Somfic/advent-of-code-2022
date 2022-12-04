@@ -1,11 +1,14 @@
-class Day2
+using advent_of_code;
+
+public class Day2 : Day
 {
-	public static void SolvePartOne()
+	protected override string FileName => "day2";
+	
+	protected override string SolvePartOne(IEnumerable<string> input)
 	{
-		var lines = File.ReadAllLines(Path.Combine("inputs", "day2"));
 		var score = 0;
 
-		foreach (var line in lines)
+		foreach (var line in input)
 		{
 			var inputs = line.Split(' ');
 			var opponentHand = HandFromCharacter(inputs[0]);
@@ -16,15 +19,14 @@ class Day2
 			score += (int)ourHand + (int)result;
 		}
 
-		Console.WriteLine($"Score: {score}");
+		return score.ToString();
 	}
 
-	public static void SolvePartTwo()
+	protected override string SolvePartTwo(IEnumerable<string> input)
 	{
-		var lines = File.ReadAllLines(Path.Combine("inputs", "day2"));
 		var score = 0;
 
-		foreach (var line in lines)
+		foreach (var line in input)
 		{
 			var inputs = line.Split(' ');
 			var opponentHand = HandFromCharacter(inputs[0]);
@@ -35,7 +37,7 @@ class Day2
 			score += (int)ourHand + (int)neededResult;
 		}
 
-		Console.WriteLine($"Score: {score}");
+		return score.ToString();
 	}
 
 	private static Hand ChooseOurHand(Result neededResult, Hand opponentHand)
