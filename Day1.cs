@@ -4,17 +4,17 @@ public class Day1 : Day
 {
 	protected override string FileName => "day1";
 
-	protected override string SolvePartOne(IEnumerable<string> input)
+	protected override string SolvePartOne(ICollection<string> input)
 	{
 		return SortElves(input).Max().ToString();
 	}
 
-	protected override string SolvePartTwo(IEnumerable<string> input)
+	protected override string SolvePartTwo(ICollection<string> input)
 	{
 		return string.Join(", ", SortElves(input).Take(3));
 	}
 
-	private IEnumerable<int> SortElves(IEnumerable<string> input)
+	private IEnumerable<int> SortElves(ICollection<string> input)
 	{
 		var elves = new List<int>() { 0 };
 

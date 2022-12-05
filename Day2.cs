@@ -4,7 +4,7 @@ public class Day2 : Day
 {
 	protected override string FileName => "day2";
 	
-	protected override string SolvePartOne(IEnumerable<string> input)
+	protected override string SolvePartOne(ICollection<string> input)
 	{
 		var score = 0;
 
@@ -22,7 +22,7 @@ public class Day2 : Day
 		return score.ToString();
 	}
 
-	protected override string SolvePartTwo(IEnumerable<string> input)
+	protected override string SolvePartTwo(ICollection<string> input)
 	{
 		var score = 0;
 

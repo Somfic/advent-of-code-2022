@@ -6,8 +6,8 @@ public abstract class Day
 
     protected abstract string FileName { get; }
 
-    protected abstract string SolvePartOne(IEnumerable<string> input);
-    protected abstract string SolvePartTwo(IEnumerable<string> input);
+    protected abstract string SolvePartOne(ICollection<string> input);
+    protected abstract string SolvePartTwo(ICollection<string> input);
 
     public (string partOne, string partTwo) Solve()
     {
