@@ -1,6 +1,6 @@
 using advent_of_code;
 
-var days = new Day[] { new Day1(), new Day2() };
+var days = new Day[] { new Day1(), new Day2(), new Day3() };
 
 for (var index = 0; index < days.Length; index++)
 {
